@@ -23,7 +23,7 @@ import os.path
 cwd = os.path.dirname(__file__)
 
 
-with open(f'{cwd}/utils/taggingEfficienciesDenseLookup.pkl', 'rb') as _file:
+with open(f'{cwd}/ScaleFactors/taggingEfficienciesDenseLookup.pkl', 'rb') as _file:
     taggingEffLookup = pickle.load(_file)
 
 
