@@ -1,0 +1,15 @@
+universe = vanilla
+
+Name = ttgamma
+Fileset = mc_2016
+NJobs = 40
+
+transfer_input_files = run.py,ttgamma,coffeaenv.tar.gz
+
+Executable = condorwrap
+Arguments = ./run.py --fileset $(Fileset) --split $(NJobs) $(Process) --output output_$(Process).coffea
+Output = $(Name).$(Process).stdout
+Error = $(Name).$(Process).stderr
+Log = $(Name).$(Process).log
+
+queue $(NJobs)

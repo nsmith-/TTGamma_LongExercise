@@ -25,6 +25,7 @@ setup(name="ttgamma",
       install_requires=[
           "coffea",
           "rhalphalib",
+          "xxhash",  # for uproot LZ4
       ],
       setup_requires=["flake8"] + pytest_runner,
 )
